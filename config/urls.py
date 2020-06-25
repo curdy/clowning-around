@@ -6,6 +6,8 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 from django.conf.urls import url
 
+
+
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
@@ -19,6 +21,10 @@ urlpatterns = [
     url(r'^', include('clowning_around.appointments.urls')),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+     path('api-auth/', include('rest_framework.urls'))
+]
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
