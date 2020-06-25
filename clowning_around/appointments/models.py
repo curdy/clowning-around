@@ -23,6 +23,7 @@ class Appointment (models.Model):
         return self.appointment_name
     
 class ReportAppointmentIssue(models.Model):
+    clown = models.ForeignKey(Clown, null=True, on_delete=models.SET_NULL)
     appointment = models.ForeignKey(Appointment, null=True, on_delete=models.SET_NULL)
     reported_issue = models.CharField(blank=True, max_length=500)
     def __str__(self):
@@ -31,5 +32,5 @@ class ReportAppointmentIssue(models.Model):
 class RequestClientDetailss(models.Model):
     request_client_contacts = models.CharField(blank=True, max_length=500)
     request_reason = models.CharField(blank=True, max_length=500)
-    clown = models.ForeignKey(Clown, null=True, on_delete=models.SET_NULL)
     client = models.ForeignKey(Client, null=True, on_delete=models.SET_NULL)
+    clown = models.ForeignKey(Clown, null=True, on_delete=models.SET_NULL)

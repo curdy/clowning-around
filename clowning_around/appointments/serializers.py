@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from clowning_around.appointments.models import Appointment
+from clowning_around.appointments.models import Appointment, ReportAppointmentIssue, RequestClientDetailss
 
 class AppointmentSerializer(serializers.ModelSerializer): #class that will manage serialization and deserialization from JSON.
     class Meta:
@@ -7,4 +7,14 @@ class AppointmentSerializer(serializers.ModelSerializer): #class that will manag
         
         fields = "__all__"
         
-        #fields = ("appointment_name","appointment_date","appointment_status")
+class AppointmentIssueSerializer(serializers.ModelSerializer): #class that will manage serialization and deserialization from JSON.
+    class Meta:
+        model = ReportAppointmentIssue
+        
+        fields = "__all__"
+
+class RequestContactSerializer(serializers.ModelSerializer): #class that will manage serialization and deserialization from JSON.
+    class Meta:
+        model = RequestClientDetailss
+        
+        fields = "__all__"        
