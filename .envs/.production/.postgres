@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=clowning_around
+POSTGRES_USER=uDHDulqLiMtUusKYSqXUOBotojjwBCiy
+POSTGRES_PASSWORD=O3ZM37N0rOwY9vC7gt2le1lMdUPAqDfIvwBuYeQ5JXkuuxSAx43ZWNnHVo03Xznb

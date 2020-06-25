@@ -1,0 +1,39 @@
+# General
+# ------------------------------------------------------------------------------
+# DJANGO_READ_DOT_ENV_FILE=True
+DJANGO_SETTINGS_MODULE=config.settings.production
+DJANGO_SECRET_KEY=p1Dl4hyty8kKsK79DAEhkLQvtUJBmN9paa2pmLHVstwrBdvEXqYO5Go2thINhTXd
+DJANGO_ADMIN_URL=mq9WVLN0Y28M82tIyAWOJyb6oVEh010U/
+DJANGO_ALLOWED_HOSTS=.clowningaround.4-sure.net
+
+# Security
+# ------------------------------------------------------------------------------
+# TIP: better off using DNS, however, redirect is OK too
+DJANGO_SECURE_SSL_REDIRECT=False
+
+# Email
+# ------------------------------------------------------------------------------
+MAILGUN_API_KEY=
+DJANGO_SERVER_EMAIL=
+MAILGUN_DOMAIN=
+
+# django-allauth
+# ------------------------------------------------------------------------------
+DJANGO_ACCOUNT_ALLOW_REGISTRATION=True
+
+# Gunicorn
+# ------------------------------------------------------------------------------
+WEB_CONCURRENCY=4
+
+
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/0
+
+# Celery
+# ------------------------------------------------------------------------------
+
+# Flower
+CELERY_FLOWER_USER=lidSlmhLDTMXTUiCRxMjMKaMISSnmHQU
+CELERY_FLOWER_PASSWORD=Vt9KZPhSTGV29ly3s3yG2Za4Db4GI7pckhAmjnud1PMQUX7ZtBt5iceVlKMwC3cM
+
