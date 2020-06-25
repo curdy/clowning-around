@@ -6,10 +6,7 @@ from .models import Appointment, AppointmentRate, ReportAppointmentIssue, Reques
 class AppointmentAdmin(admin.ModelAdmin):
 
     list_display = ('appointment_name', 'appointment_date', 'appointment_status', 'clown', 'client_rate_appointment')
-    list_filter = ('appointment_status', 'clown')  # The list_filter option
-    #ordering = ('appointment_date',)
-    search_fields = (
-    'appointment_name', 'appointment_status')  # sets the default search fields.
+    
 
 
 
