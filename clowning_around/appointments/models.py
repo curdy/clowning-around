@@ -34,3 +34,15 @@ class RequestClientDetailss(models.Model):
     request_reason = models.CharField(blank=True, max_length=500)
     client = models.ForeignKey(Client, null=True, on_delete=models.SET_NULL)
     clown = models.ForeignKey(Clown, null=True, on_delete=models.SET_NULL)
+    
+class AppointmentRate(models.Model):
+    RATE_CHOICES = (
+        ('1', 'GOOD',),
+        ('2', 'Alright',),
+        ('3', 'Bad',),
+    )
+    clint = models.ForeignKey(Clown, null=True, on_delete=models.SET_NULL)
+    appointment = models.ForeignKey(Appointment, null=True, on_delete=models.SET_NULL)
+    rate = models.CharField(choices=RATE_CHOICES, blank=True, max_length=500)
+    def __str__(self):
+        return self.appointment

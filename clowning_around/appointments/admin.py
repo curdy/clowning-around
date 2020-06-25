@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Appointment
+from .models import Appointment, AppointmentRate, ReportAppointmentIssue, RequestClientDetailss
 
 # Register your models here.
 @admin.register(Appointment)
@@ -18,3 +18,7 @@ class AppointmentReportAdmin(admin.ModelAdmin):
     
 class ContactRequestAdmin(admin.ModelAdmin):
     pass
+
+admin.site.register(ReportAppointmentIssue)
+admin.site.register(RequestClientDetailss)
+admin.site.register(AppointmentRate)

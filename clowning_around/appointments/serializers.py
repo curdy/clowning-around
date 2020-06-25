@@ -7,6 +7,10 @@ class AppointmentSerializer(serializers.ModelSerializer): #class that will manag
         
         fields = "__all__"
         
+        def create(self, validated_data):
+            return Appointment.objects.create(**validated_data)
+            
+        
 class AppointmentIssueSerializer(serializers.ModelSerializer): #class that will manage serialization and deserialization from JSON.
     class Meta:
         model = ReportAppointmentIssue

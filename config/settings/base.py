@@ -68,6 +68,7 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
+    
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -76,6 +77,7 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "rest_framework",
     "django_celery_beat",
+    'emoji_picker',
 ]
 
 LOCAL_APPS = [
